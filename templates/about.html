@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - News Classification System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('classify') }}">Classify</a></li>
+                <li><a href="{{ url_for('results') }}">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>About Our System</h1>
+        <p>
+            Our system leverages advanced Machine Learning models like Support Vector Machines (SVM) and Neural Networks to classify news articles. 
+            It enables users to quickly find the news they care about, saving time and effort.
+        </p>
+        <p>
+            With growing demand for tailored information, our classification tool organizes news into predefined categories like Finance, Sports, Technology, 
+            and more for quick access and insights.
+        </p>
+    </main>
+    <footer>
+        <p>© 2024 News Classification System | Designed by US</p>
+    </footer>
+</body>
+</html>

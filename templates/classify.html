@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classify News Articles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('classify') }}">Classify</a></li>
+                <li><a href="{{ url_for('results') }}">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="classify">
+        <h2>Classify Your News Article</h2>
+        <p>Select one of the following methods:</p>
+
+        <!-- Form for text input classification -->
+        <form action="{{ url_for('classify') }}" method="POST">
+            <label for="text_input">Paste the text of the news article:</label><br>
+            <textarea id="text_input" name="text_input" rows="6" cols="50" placeholder="Paste text here..." required></textarea><br><br>
+            <button type="submit" class="btn">Classify Text</button>
+        </form>
+        
+        <p>or</p>
+
+        <!-- File upload form for Excel/CSV file -->
+        <form action="{{ url_for('classify') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="news_file" accept=".xlsx, .xls, .csv" required>
+            <button type="submit" class="btn">Upload File for Classification</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024 News Classification System | Designed by US</p>
+    </footer>
+</body>
+</html>

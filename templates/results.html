@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('classify') }}">Classify</a></li>
+                <li><a href="{{ url_for('results') }}">Results</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="results">
+        <h2>Classification Results</h2>
+        <p>{{ results }}</p>
+    </main>
+
+    <footer>
+        <p>© 2024 News Classification System | Designed by US</p>
+    </footer>
+</body>
+</html>
